@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_main.xml"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home_dest">
+
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.alvindizon.basejavaapp.ui.screens.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_dest_to_settings_menu_dest"
+            app:destination="@id/settings_menu_dest"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings_menu_dest"
+        android:name="com.alvindizon.basejavaapp.ui.screens.settings.SettingsMenuFragment"
+        android:label="fragment_settings_menu"
+        tools:layout="@layout/fragment_settings_menu" >
+        <action
+            android:id="@+id/action_settings_menu_dest_to_comm_settings_dest"
+            app:destination="@id/comm_settings_dest"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/comm_settings_dest"
+        android:name="com.alvindizon.basejavaapp.ui.screens.settings.CommSettingsFragment"
+        android:label="CommSettingsFragment" />
+    <action android:id="@+id/action_global_settings_menu_dest" app:destination="@id/settings_menu_dest" />
+</navigation>

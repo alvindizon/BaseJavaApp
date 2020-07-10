@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">BaseJavaApp</string>
+
+    <string name="label_empty_string" />
+
+    <string name="title_settings">Settings Menu</string>
+
+    <!--comm preferences-->
+    <string name="pref_title_mobile_data">Mobile data</string>
+    <string name="pref_title_wifi">Wi-Fi</string>
+    <string name="pref_title_mobile_ip">Mobile data IP</string>
+    <string name="pref_default_mobile_ip">10.36.101.52</string>
+    <string name="pref_title_secondary_mobile_ip">Secondary mobile IP</string>
+    <string name="pref_secondary_mobile_ip">10.36.101.52</string>
+    <string name="pref_title_wifi_ip">Wi-Fi IP</string>
+    <string name="pref_title_secondary_wifi_ip">Secondary Wi-Fi IP</string>
+    <string name="pref_default_wifi_ip">180.232.98.122</string>
+    <string name="pref_secondary_wifi_ip">180.232.98.122</string>
+    <string name="pref_title_mobile_port">Mobile data port</string>
+    <string name="pref_default_mobile_port">3830</string>
+    <string name="pref_title_secondary_mobile_port">Secondary mobile port</string>
+    <string name="pref_secondary_mobile_port">3830</string>
+    <string name="pref_title_wifi_port">Wi-Fi port</string>
+    <string name="pref_title_secondary_wifi_port">Secondary Wi-Fi port</string>
+    <string name="pref_default_wifi_port">7443</string>
+    <string name="pref_secondary_wifi_port">7443</string>
+    <string name="pref_default_conn_timeout">60</string>
+    <string name="pref_title_conn_timeout">Connection timeout (seconds)</string>
+    <string name="pref_title_enable_https">Enable HTTPS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_home">Home</string>
+    <string name="settings_comm">Communication</string>
+</resources>

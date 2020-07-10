@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--communication preference keys-->
+    <string translatable="false" name="key_mobile_ip">key_mobile_ip</string>
+    <string translatable="false" name="key_mobile_secondary_ip">key_mobile_secondary_ip</string>
+    <string translatable="false" name="key_wifi_ip">key_wifi_ip</string>
+    <string translatable="false" name="key_wifi_secondary_ip">key_wifi_secondary_ip</string>
+    <string translatable="false" name="key_mobile_port">key_mobile_port</string>
+    <string translatable="false" name="key_mobile_secondary_port">key_mobile_secondary_port</string>
+    <string translatable="false" name="key_wifi_port">key_wifi_port</string>
+    <string translatable="false" name="key_wifi_secondary_port">key_wifi_secondary_port</string>
+    <string translatable="false" name="key_conn_timeout">key_conn_timeout</string>
+    <string translatable="false" name="key_enable_https">key_enable_https</string>
+    <!--tokens-->
+    <string translatable="false" name="key_access_token">key_access_token</string>
+    <string translatable="false" name="key_token_type">key_token_type</string>
+    <string translatable="false" name="key_expires_in">key_expires_in</string>
+    <string translatable="false" name="key_refresh_token">key_refresh_token</string>
+</resources>

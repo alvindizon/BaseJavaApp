@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'androidx.navigation.safeargs'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "com.alvindizon.basejavaapp"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "ApiKey", "\"123\"")
+            buildConfigField("String", "ApiVer", "\"v1\"")
+            buildConfigField("String", "CustomTrustKeystorePwd", "\"password\"")
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField("String", "ApiKey", "\"123\"")
+            buildConfigField("String", "ApiVer", "\"v1\"")
+            buildConfigField("String", "CustomTrustKeystorePwd", "\"password\"")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+    flavorDimensions 'default'
+    productFlavors {
+        mock {
+            dimension = 'default'
+        }
+        prod {
+            dimension = 'default'
+        }
+    }
+    sourceSets {
+        prod { java.srcDirs = ['src/prod/java', 'src/prod/java/'] }
+        mock {assets.srcDirs = ['src/mock/assets', 'src/mock/assets/'] }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Dagger 2
+    implementation 'com.google.dagger:dagger:2.28.1'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.28.1'
+
+    // Material Design
+    implementation 'com.google.android.material:material:1.1.0'
+
+    // Lifecycle libs
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.2.0'
+
+    // Preference
+    implementation 'androidx.preference:preference:1.1.1'
+
+    //Room
+    implementation 'androidx.room:room-runtime:2.2.5'
+    implementation "androidx.room:room-rxjava2:2.2.5"
+    annotationProcessor "androidx.room:room-compiler:2.2.5"
+
+    // Three Ten ABP
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.3'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // JSON Parsing
+    implementation 'com.squareup.moshi:moshi:1.9.3'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    // HTTP logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.7.2'
+
+    // RxJava2
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.1'
+
+    //Navigation
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+
+    // Find annoying Dagger/Databinding compile-time bugs
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+    // Better logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+}

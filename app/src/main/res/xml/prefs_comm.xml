@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_title_mobile_data">
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_mobile_ip"
+            android:key="@string/key_mobile_ip"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_mobile_ip" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_default_mobile_port"
+            android:dialogLayout="@layout/pref_numeric_text"
+            android:key="@string/key_mobile_port"
+            android:title="@string/pref_title_mobile_port" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_secondary_mobile_ip"
+            android:key="@string/key_mobile_secondary_ip"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_secondary_mobile_ip" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_secondary_mobile_port"
+            android:dialogLayout="@layout/pref_numeric_text"
+            android:key="@string/key_mobile_secondary_port"
+            android:title="@string/pref_title_secondary_mobile_port" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_title_wifi">
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_wifi_ip"
+            android:key="@string/key_wifi_ip"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_wifi_ip" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_default_wifi_port"
+            android:dialogLayout="@layout/pref_numeric_text"
+            android:key="@string/key_wifi_port"
+            android:title="@string/pref_title_wifi_port" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_secondary_wifi_ip"
+            android:key="@string/key_wifi_secondary_ip"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_secondary_wifi_ip" />
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_secondary_wifi_port"
+            android:dialogLayout="@layout/pref_numeric_text"
+            android:key="@string/key_wifi_secondary_port"
+            android:title="@string/pref_title_secondary_wifi_port" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory>
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_default_conn_timeout"
+            android:dialogLayout="@layout/pref_numeric_text"
+            android:key="@string/key_conn_timeout"
+            android:title="@string/pref_title_conn_timeout" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/key_enable_https"
+            android:title="@string/pref_title_enable_https" />
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/ll_settings_item"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/settings_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|start"
+            android:paddingStart="48dp"
+            android:paddingEnd="0dp"
+            android:textSize="20sp"
+            android:fontFamily="lato"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+</layout>
